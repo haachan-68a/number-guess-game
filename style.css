@@ -1,0 +1,4 @@
+/* Tailwindでカバーできない微調整や独自スタイルを書く場所 */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}

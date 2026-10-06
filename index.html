@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数当てゲーム</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- JS -->
+    <script src="main.js" defer></script>
+  </head>
+  <body class="bg-slate-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md text-center">
+      <h1 class="text-2xl font-bold text-slate-800 mb-2">数当てゲーム 🎯</h1>
+      <p class="text-slate-600 text-sm mb-6">
+        1 から 100 までの数字を入力してね！
+      </p>
+
+      <!-- 入力フォームエリア -->
+      <div id="game-area" class="space-y-4">
+        <input
+          type="number"
+          id="guess-input"
+          min="1"
+          max="100"
+          placeholder="例: 50"
+          class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-center text-lg"
+        />
+        <button
+          id="guess-btn"
+          class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-200"
+        >
+          推測する
+        </button>
+      </div>
+
+      <!-- 結果メッセージ -->
+      <p
+        id="message"
+        class="mt-6 text-lg font-medium text-slate-700 min-h-[1.75rem]"
+      ></p>
+
+      <!-- リトライボタン（最初は非表示） -->
+      <button
+        id="restart-btn"
+        class="hidden mt-4 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded-lg transition duration-250"
+      >
+        もう一度遊ぶ
+      </button>
+    </div>
+  </body>
+</html>
